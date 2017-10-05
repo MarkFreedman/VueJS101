@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Music Playlist Builder</title>
+        <script src="vue.js"></script>
+    </head>
+
+    <body>
+        <div id="app">
+            <h1>{{ title }}</h1>
+            <br>
+            Mouse coordinates: {{ mouseCoords }}
+            <br>
+            <button @click="changeTitle" @mouseover="onMouseOver">Change Title</button>
+        </div>
+    </body>
+
+</html>
+
+
+<script>
+    var myApp = new Vue({
+        el: '#app',
+        data: {
+            title: 'Music Playlist Builder',
+            mouseCoords: ''
+        },
+        methods: {
+            changeTitle() {
+                this.title = 'I changed this title';
+            },
+            onMouseOver(event) {
+                this.mouseCoords = `x: ${event.x}, y: ${event.y}`;
+            }
+        }
+    });
+</script>
+  

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Music Playlist Builder</title>
+        <script src="vue.js"></script>
+    </head>
+
+    <body>
+        <div id="app">
+            <h1>{{ title }}</h1>
+            <br>
+            <button @click="changeTitle('My Title # 1', $event)">Change to Title # 1</button>
+            <button @click="changeTitle('My Title # 2', $event)">Change to Title # 2</button>
+        </div>
+    </body>
+
+</html>
+
+
+<script>
+    var myApp = new Vue({
+        el: '#app',
+        data: {
+            title: 'Music Playlist Builder'
+        },
+        methods: {
+            changeTitle(newTitle, event) {
+                alert("I clicked button labeled \"" + event.target.innerHTML + "\"");
+                this.title = newTitle;
+            }
+        }
+    });
+</script>
+  

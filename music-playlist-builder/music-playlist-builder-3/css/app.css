@@ -1,0 +1,8 @@
+#app-title {
+  color: white;
+  padding: 5px;
+}
+
+.list-group-item {
+    cursor: pointer;
+}
