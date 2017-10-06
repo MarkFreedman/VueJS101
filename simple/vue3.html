@@ -9,7 +9,7 @@
 
     <body>
         <div id="app">
-            <h1>{{ title }}</h1>
+            <h1>{{ getTitle() }}</h1>
         </div>
     </body>
     
@@ -20,7 +20,7 @@
     var myApp = new Vue({
         el: '#app',
         data: {
-            title: 'Music Playlist Builder'
+            title: 'Music Playlist Builder1'
         },
         methods: {
             getTitle() {
